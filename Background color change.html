@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackgroundColorChange</title>
+    <style>
+        .container{
+            display:grid;
+            grid-template-rows:25vh 50vh 25vh;
+            grid-template-columns:25vw 50vw 25vw;
+            grid-template-areas:"top-color top-color top-color"
+                                "mid-color-left display-color mid-color-right"
+                                "bottom-color bottom-color bottom-color";
+        }
+        .top-color{
+             grid-area:top-color;
+        }
+        .mid-color-left{
+             grid-area:mid-color-left;
+         }
+        .display-color{
+            grid-area:display-color;
+         }
+        .mid-color-right{
+             grid-area:mid-color-right;
+        }
+        .bottom-color{
+            grid-area:bottom-color;
+        }
+        #div-color{
+            background-color:palegreen;
+            height:50vh;
+            width:50vw;
+            border-radius:5px;
+        }
+        .btn-class{
+            border:0;
+            height:10vh;
+            width:4vw;
+            border-radius:3px;
+        }
+        #btn-1{
+            background-color:aqua;
+        }
+        #btn-2{
+            background-color:aquamarine;
+        }
+        #btn-3{
+            background-color:black;
+        }
+        #btn-4{
+            background-color:yellow;
+        }
+    </style>
+    <script>
+        function ClickToChangeColor(element){
+            document.write("function is worked");
+            document.getElementByClass('display-color').style.backgroundcolor=element;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    
+    <div class="top-color">
+        <button class="btn-class" id="btn-1" onclick="ClickToChangeColor(document.getElementById('btn-1').style.backgroundcolor)"></button>
+    </div>
+    <div class="mid-color-left">
+        <button class="btn-class" id="btn-2"></button>
+    </div>
+    <div id="div-color" class="display-color">
+
+    </div>
+    <div  class="mid-color-right">
+        <button class="btn-class" id="btn-3"></button>
+    </div>
+    <div class="bottom-color">
+    <button class="btn-class bottom-color" id="btn-4"></button>
+    </div>
+    </div>
+</body>
+</html>
 
