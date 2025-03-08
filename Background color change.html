@@ -55,8 +55,8 @@
     </style>
     <script>
         function ClickToChangeColor(element){
-            document.write("function is worked");
             document.getElementById('div-color').style.backgroundcolor=element;
+            document.write("function is worked");
         }
     </script>
 </head>
@@ -64,7 +64,7 @@
     <div class="container">
     
     <div class="top-color">
-        <button class="btn-class" id="btn-1" onclick="ClickToChangeColor(document.getElementById('btn-1').style.backgroundcolor)"></button>
+        <button class="btn-class" id="btn-1" onclick="ClickToChangeColor('document.getElementById('btn-1').style.backgroundcolor')"></button>
     </div>
     <div class="mid-color-left">
         <button class="btn-class" id="btn-2"></button>
