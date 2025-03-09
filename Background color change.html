@@ -54,7 +54,7 @@
         }
     </style>
     <script>
-            function ClickToChangeColor(elementId){
+           /* function ClickToChangeColor(elementId){
                 var button = document.getElementById("elementId");
                 getButtonBackgroundColor(button);
                 
@@ -64,6 +64,11 @@
                     document.getElementById("div-color").style.backgroundcolor=backgroundColor;
                     document.write("function id working");
                 }
+            }*/
+        function ClickToChangeColor(color)
+            {
+                var gColor=color;
+                document.body.style.backgroundcolor=gColor;
             }
     </script>
 </head>
@@ -71,7 +76,7 @@
     <div class="container">
     
     <div class="top-color">
-        <button class="btn-class" id="btn-1" onclick="ClickToChangeColor(btn-1)"></button>
+        <button class="btn-class" id="btn-1" onclick="ClickToChangeColor(yellow)"></button>
     </div>
     <div class="mid-color-left">
         <button class="btn-class" id="btn-2"></button>
