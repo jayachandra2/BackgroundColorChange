@@ -67,8 +67,10 @@
             }*/
         function ClickToChangeColor(color)
             {
+                document.write("function is running");
                 var gColor=color;
                 document.body.style.backgroundcolor=gColor;
+                document.write("function is ending properly");
             }
     </script>
 </head>
@@ -76,7 +78,7 @@
     <div class="container">
     
     <div class="top-color">
-        <button class="btn-class" id="btn-1" onclick="ClickToChangeColor(yellow)"></button>
+        <button class="btn-class" id="btn-1" onclick="ClickToChangeColor('yellow')"></button>
     </div>
     <div class="mid-color-left">
         <button class="btn-class" id="btn-2"></button>
