@@ -54,17 +54,23 @@
         }
     </style>
     <script>
-        function ClickToChangeColor(element){
-            document.getElementById('div-color').style.backgroundcolor=element;
-            document.write("function is worked");
-        }
+            function ClickToChangeColor(elementId){
+                var button = document.getElementById("elementId");
+                getButtonBackgroundColor(button);
+                function getBackgroundColor(button){
+                    var style = window.getCompletedStyle(button);
+                    var backgroundColor=style.backgroundColor;
+                    document.getElementById("div-color").style.backgroundcolor=backgroundColor;
+                    document.write("function id working");
+                }
+            }
     </script>
 </head>
 <body>
     <div class="container">
     
     <div class="top-color">
-        <button class="btn-class" id="btn-1" onclick="ClickToChangeColor('document.getElementById('btn-1').style.backgroundcolor')"></button>
+        <button class="btn-class" id="btn-1" onclick="ClickToChangeColor(this.id)"></button>
     </div>
     <div class="mid-color-left">
         <button class="btn-class" id="btn-2"></button>
